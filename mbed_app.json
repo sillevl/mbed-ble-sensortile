@@ -1,0 +1,37 @@
+{
+    "target_overrides": {
+        "*": {
+            "platform.stdio-baud-rate": 115200
+        },
+        "K64F": {
+            "target.components_add": ["BlueNRG_MS"],
+            "target.features_add": ["BLE"],
+            "target.extra_labels_add": ["CORDIO"]
+        },
+        "NUCLEO_F401RE": {
+            "target.components_add": ["BlueNRG_MS"],
+            "target.features_add": ["BLE"],
+            "target.extra_labels_add": ["CORDIO"]
+        },
+        "NRF52840_DK": {
+            "target.features_add": ["BLE"]
+        },
+        "NRF52_DK": {
+            "target.features_add": ["BLE"]
+        },
+        "NUCLEO_L476RG": {
+            "target.components_add": ["BlueNRG_MS"],
+            "target.features_add": ["BLE"],
+            "target.extra_labels_add": ["CORDIO"],
+            "platform.stdio-baud-rate": 115200,
+            "target.printf_lib": "std",
+            "platform.minimal-printf-enable-floating-point": false,
+            "bluenrg_ms.SPI_MOSI":  "PA_7",
+            "bluenrg_ms.SPI_MISO":  "PA_6",
+            "bluenrg_ms.SPI_nCS":   "PB_2",
+            "bluenrg_ms.SPI_RESET": "PH_0",
+            "bluenrg_ms.SPI_IRQ":   "PC_5",
+            "bluenrg_ms.SPI_SCK":   "PA_5"
+        }
+    }
+}
